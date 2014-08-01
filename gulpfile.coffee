@@ -29,13 +29,14 @@ destinations =
 
 # TASKS -------------------------------------------------------------
 
-gulp.task 'connect', connect.server(
-  root: ['dist'] # this is the directory the server will run
-  port: 1337
-  livereload: true
-  open:
-    browser: 'chromium-browser' # change that to the browser you're using
-)
+gulp.task 'connect', ->
+  connect.server(
+    root: ['dist'] # this is the directory the server will run
+    port: 1337
+    livereload: true
+    open:
+      browser: 'chromium-browser' # change that to the browser you're using
+  )
 
 gulp.task 'style', ->
   gulp.src(sources.sass) # we defined that at the top of the file
